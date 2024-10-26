@@ -1,44 +1,3 @@
-.inter-regular {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.inter-semibold {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.plus-jakarta-sans-regular {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.plus-jakarta-sans-medium {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.plus-jakarta-sans-semibold {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -84,6 +43,7 @@
   padding: 12px 32px;
   border-radius: 50rem;
   border: 1px solid #fff;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   cursor: pointer;
   font-size: 16px;
@@ -105,6 +65,7 @@
   z-index: 100;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  font-family: "Poppins", sans-serif;
 }
 .header.scrolled {
   -webkit-backdrop-filter: blur(8px);
@@ -156,6 +117,7 @@
   padding: 12px 32px;
   border-radius: 50rem;
   border: 1px solid #fff;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   cursor: pointer;
   font-size: 16px;
@@ -176,6 +138,8 @@
   background-color: transparent;
   margin-left: 15px;
   font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 .offer-text {
   width: 50%;
@@ -185,12 +149,15 @@
   font-size: 53px;
   color: #131313;
   line-height: normal;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 .offer-text h2 {
   margin-top: 25px;
   font-size: 20px;
   line-height: 1.6;
   color: #393939;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 .offer-video {
   width: 50%;
@@ -221,12 +188,15 @@
   font-weight: 600;
   color: #050505;
   line-height: normal;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 }
 .why-cards .card p {
   font-size: 18px;
   line-height: 27px;
   font-weight: 400;
   color: #323232;
+  font-family: "Inter", sans-serif;
 }
 .why-cards .card:first-child {
   background-color: #6c60f3;
@@ -268,6 +238,10 @@
   color: #202020;
   margin-top: 20px;
   max-width: 400px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .steps-wrap {
@@ -300,13 +274,22 @@
   font-size: 22px;
   color: #171717;
   gap: 15px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 .steps-text .singleStep p {
   font-weight: 400;
   font-size: 18px;
+  line-height: 27px;
   color: #323232;
   margin-top: 25px;
   display: none;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .action-banner {
@@ -329,17 +312,24 @@
   font-weight: 800;
   line-height: 120%;
   text-align: center;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
 .action-banner p {
   color: #eaeaea;
   font-size: 19px;
-  font-weight: 500;
   margin-top: 25px;
   margin-bottom: 50px;
   line-height: 24px;
   text-align: center;
   max-width: 500px;
   line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .action-banner button {
   background-color: #fff;
@@ -348,7 +338,10 @@
   color: #000;
   border-radius: 50rem;
   transition: background 0.2s ease;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -392,6 +385,10 @@
   color: #25313c;
   margin: 30px 0;
   line-height: 27px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .reviews .review .slashes {
   display: block;
@@ -421,10 +418,18 @@
 .reviews .review-bottom__person div h2 {
   font-size: 18px;
   color: #25313c;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 .reviews .review-bottom__person div h3 {
   font-size: 14px;
   color: #818181;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .faq {
@@ -466,12 +471,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 .faq-item p {
   background-color: #fff;
   box-shadow: 0 16px 36px 0 hsla(0, 0%, 44%, 0.07);
   color: #171717;
-  font-weight: 400;
   font-size: 19px;
   display: none;
   width: 100%;
@@ -480,6 +488,10 @@
   border-bottom-right-radius: 10px;
   max-width: 800px;
   margin-top: -7px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .book {
@@ -494,6 +506,7 @@
   color: #fff;
   font-weight: 700;
   margin-bottom: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 .book p {
   font-size: 18px;
@@ -503,11 +516,13 @@
   font-weight: 300;
   margin: 0 auto;
   line-height: 1.6;
+  font-family: "Inter", sans-serif;
 }
 
 footer {
   padding-top: 60px;
   padding-bottom: 30px;
+  font-family: "Inter", sans-serif;
 }
 footer .bottom-line {
   width: 100%;
