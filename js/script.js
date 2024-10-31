@@ -48,3 +48,9 @@ window.addEventListener('scroll', () => {
       fixedElement.classList.remove('scrolled');
   }
 });
+
+document.getElementById('burger').addEventListener('click', function() {
+  const menu = document.getElementById('menu');
+  this.classList.toggle('active');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
