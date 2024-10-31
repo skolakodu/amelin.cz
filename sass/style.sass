@@ -56,6 +56,9 @@
 		font-optical-sizing: auto
 		font-weight: 500
 		font-style: normal
+		@media (max-width: 768px)
+			margin-top: 1rem
+			font-size: 16px
 	&-h2
 		font-size: 40px
 		font-weight: 600
@@ -65,6 +68,11 @@
 		font-optical-sizing: auto
 		font-weight: 600
 		font-style: normal
+		@media (max-width: 768px)
+			font-size: 30px
+			flex-direction: column
+			text-align: center
+			line-height: normal
 
 
 .buttonHeader 
@@ -285,8 +293,13 @@
 
 .why
 	&-cards
-		display: flex
-		justify-content: space-between
+		gap: 2rem
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		@media (max-width: 1024px)
+			grid-template-columns: repeat(2, 1fr)
+		@media (max-width: 640px)
+			grid-template-columns: repeat(1, 1fr)
 		.card
 			box-shadow: 0 16px 36px 0 hsla(0, 0%, 44%, .03)
 			padding: 30px
@@ -318,17 +331,21 @@
 .web
 	padding-top: 130px
 	&-wrap 
-		display: flex
-		flex-wrap: wrap
+		gap: 50px
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		@media (max-width: 768px)
+			gap: 0
+			grid-template-columns: repeat(1, 1fr)
 		.webs
 			border-radius: 5px
 			cursor: pointer
-			padding: 40px
+			padding: 1rem
 			text-decoration: none
-			width: 50%
-			flex-wrap: wrap
 			&:nth-child(2n)
 				margin-top: 40px
+				@media (max-width: 1024px)
+					margin-top: 20px
 			img 
 				width: 100%
 				height: auto
@@ -343,16 +360,37 @@
 				font-optical-sizing: auto
 				font-weight: 600
 				font-style: normal
+				@media (max-width: 1024px)
+					font-size: 25px
+				@media (max-width: 768px)	
+					font-size: 17px
+					margin-top: 10px
 
 .steps
 	&-wrap
-		display: flex
+		gap: 45px
+		display: grid
+		align-items: center
+		grid-template-columns: 48% 52%
+		@media (max-width: 1280px)
+			gap: 35px
+			grid-template-columns: repeat(2, 1fr)
+		@media (max-width: 768px)
+			gap: 20px
+			grid-template-columns: repeat(1, 1fr)
 	&-image
-		width: 50%
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 9px
 		img
-			width: 100%
+			max-width: 100%
+			@media (max-width: 768px)
+				max-width: 70%
+			@media (max-width: 475px)
+				max-width: 100%
 	&-text
-		width: 50%
 		.singleStep
 			margin-bottom: 10px
 			padding: 30px
@@ -374,6 +412,8 @@
 				font-optical-sizing: auto
 				font-weight: 600
 				font-style: normal
+				@media (max-width: 1024px)
+					font-size: 19px
 			p
 				font-weight: 400
 				font-size: 18px
@@ -385,6 +425,10 @@
 				font-optical-sizing: auto
 				font-weight: 400
 				font-style: normal
+				@media (max-width: 1024px)
+					font-size: 16px
+					margin-top: 25px
+				
 
 .action
 	&-banner
