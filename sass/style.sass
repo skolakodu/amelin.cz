@@ -204,10 +204,13 @@
 	padding: 11rem 0
 	align-items: center
 	&-wrap 
-		display: flex 
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 3rem
 		align-items: center
 		@media (max-width: 1025px)
-			flex-direction: column
+			grid-template-columns: 1fr
+			gap: 5rem
 		&__buttons
 			display: flex
 			margin-top: 60px
@@ -254,9 +257,6 @@
 					padding: 20px
 					width: 100%
 	&-text 
-		width: 50% 
-		@media (max-width: 1025px)
-			width: 100%
 		h1 
 			font-weight: 800 
 			font-size: 53px 
@@ -273,12 +273,8 @@
 			font-family: "Inter", sans-serif
 			font-weight: 400
 	&-video 
-		width: 50%
 		display: flex
 		align-items: center
-		@media (max-width: 1025px)
-			width: 100%
-			margin-top: 100px
 		img 
 			cursor: pointer 
 			height: auto
@@ -444,6 +440,8 @@
 		flex-direction: column
 		justify-content: center
 		align-items: center
+		@media (max-width: 640px)
+			padding: 20px
 		h2
 			color: #fff
 			font-size: 42px
@@ -454,6 +452,8 @@
 			font-optical-sizing: auto
 			font-weight: 800
 			font-style: normal
+			@media (max-width: 475px)
+				font-size: 35px
 		p
 			color: #eaeaea
 			font-size: 19px
@@ -484,6 +484,8 @@
 			font-size: 16px
 			img
 				margin-right: 12px
+			@media (max-width: 640px)
+				padding: .8rem 1.5rem
 
 .reviews
 	padding-top: 130px
@@ -563,6 +565,8 @@
 		gap: 30px
 		align-items: start
 		margin-top: 20px
+		@media (max-width: 768px)
+			grid-template-columns: repeat(1, 1fr)
 	&-item
 		justify-content: center
 		align-items: center
@@ -594,6 +598,15 @@
 			font-optical-sizing: auto
 			font-weight: 500
 			font-style: normal
+			@media (max-width: 768px)
+				font-size: 19px
+				gap: 7px
+			@media (max-width: 475px)
+				font-size: 18px
+				gap: 5px
+				padding: 20px
+				margin-top: 15px
+
 		p
 			background-color: #fff
 			box-shadow: 0 16px 36px 0 hsla(0, 0%, 44%, .07)
@@ -610,6 +623,9 @@
 			font-optical-sizing: auto
 			font-weight: 400
 			font-style: normal
+			@media (max-width: 475px)
+				font-size: 17px
+				padding: 20px
 
 
 .book
@@ -624,6 +640,11 @@
 		font-weight: 700
 		margin-bottom: 10px
 		font-family: "Plus Jakarta Sans", sans-serif
+		@media (max-width: 1280px)
+			margin-bottom: 30px
+		@media (max-width: 475px)
+			font-size: 35px
+			line-height: normal
 	p
 		font-size: 18px
 		max-width: 600px
@@ -633,78 +654,74 @@
 		margin: 0 auto
 		line-height: 1.6
 		font-family: "Inter", sans-serif
+		margin-bottom: 20px
+
 
 
 footer
 	padding-top: 60px
 	padding-bottom: 30px
 	font-family: "Inter", sans-serif
-	.bottom-line
-		width: 100%
-		height: 1px
-		background-color: #e3e3e3
-		margin: 30px 0
-	.bottom-content
-		display: inline-flex
-		align-items: center
-		justify-content: space-between
-		width: 100%
-		p
-			font-size: 14px
-			color: #323232
-		a
-			display: inline-flex
-			align-items: center
-			justify-content: space-between
-			gap: 10px
-			font-size: 14px
-			font-weight: 600
-			color: #515151
-			img
-				width: 110px
-	.row
-		display: grid
-		grid-template-columns: repeat(5, 1fr)
-		.item
-			display: flex
-			flex-direction: column
-			width: 100%
-			&.about
-				img 
-					width: 170px
-					cursor: pointer
-				p
-					font-size: 16px
-					color: #323232
-					margin-top: 20px
-					font-weight: 400
-				span
-					font-size: 13px
-					color: #323232
-					width: 100%
-					font-weight: 300
-					&:first-of-type
-						margin-top: 30px
-			&.links
-				h2
-					font-size: 20px
-					color: #000
-					font-weight: 500
-					margin-bottom: 15px
-				button, a
-					font-size: 16px
-					color: #323232
-					font-weight: 400
-					margin-bottom: 12px
-					cursor: pointer
-					display: inline-flex
-					align-items: center
-					width: 100%
-					gap: 7px
-					background-color: transparent
-					background-image: none
-					text-decoration: none
-					border: none
-					outline: none
-					font-family: "Inter", sans-serif
+
 					
+
+.footer-wrap
+	display: flex
+	flex-direction: column
+	margin: auto
+	margin-bottom: 100px
+	text-align: center
+	@media (max-width: 768px) 
+		max-width: 400px
+		text-align: left
+	a
+		font-size: 18px
+		color: #323232
+		font-weight: 400
+		cursor: pointer
+		align-items: center
+		width: 100%
+		gap: 7px
+		display: inline-flex
+		justify-content: center
+		background-color: transparent
+		background-image: none
+		text-decoration: none
+		border: none
+		outline: none
+		font-family: "Inter", sans-serif
+		img
+			width: 20px
+			height: 20px
+		@media (max-width: 768px)
+			justify-content: start
+	div
+		display: flex
+		flex-direction: column
+		margin-top: 30px
+		span
+			margin: 2px 0
+		// @media (max-width: 768px) 
+	span 
+		font-size: 18px
+		color: #323232
+		// margin-top: 20px
+		font-weight: 400
+		width: 100%
+		
+
+.footer-question
+	font-size: 20px
+	color: #000
+	font-weight: 500
+	margin-bottom: 10px
+	margin-top: 30px
+
+.footer-logo
+	width: 170px
+	cursor: pointer
+	@media (min-width: 768px) 
+		margin: auto
+
+.footer-copy
+	margin-top: 30px

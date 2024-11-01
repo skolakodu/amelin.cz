@@ -1,13 +1,20 @@
 const swiper = new Swiper('.swiper', {
     loop: true,
-    slidesPerView: 3,
-    spaceBetween: 50,
-    // Navigation arrows
+    slidesPerView: 1,
     navigation: {
       nextEl: '.prev',
       prevEl: '.next',
     },
-  
+    breakpoints: {
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      }
+    },
 
   });
 
