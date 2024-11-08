@@ -1,4 +1,4 @@
-
+$accent: #4169E1
 
 *
 	margin: 0
@@ -10,6 +10,52 @@
 	width: 100%
 	margin: 0 auto
 	padding: 0 1rem
+
+.video-modal
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, .697)
+	display: none
+	align-items: center
+	justify-content: center
+	z-index: 999
+	padding: 30px
+	flex-direction: column
+
+.player
+	width: 100%
+	max-width: 1100px
+	height: 100%
+	max-height: 700px
+	position: relative
+	z-index: 1000
+	iframe
+		width: 100%
+		height: 100%
+	@media (max-width: 640px)
+		max-width: 900px
+		max-height: 400px
+
+.button-modal
+	margin-top: 20px
+	font-size: 16px
+	line-height: 24px
+	background-color: $accent
+	border: none
+	color: #fff
+	border-radius: 50rem
+	transition: background .2s ease
+	font-weight: 400
+	cursor: pointer
+	font-family: Poppins, sans-serif
+	padding: 20px 30px
+	@media (max-width: 640px)
+		padding: .8rem 1.5rem
+
+
 
 @media (min-width: 475px)
 	.container
@@ -46,7 +92,7 @@
 		margin-top: 30px
 		margin-bottom: 65px
 	&-text
-		color: #6c60f3
+		color: $accent
 		font-weight: 500
 		font-size: 16px
 		text-align: center
@@ -86,7 +132,7 @@
 	cursor: pointer 
 	font-size: 16px 
 	color: #fff 
-	background-color: #7b70f3 
+	background-color: $accent
 	img 
 		width: 18px 
 		height: 40px 
@@ -114,6 +160,9 @@
 		align-items: center 
 	&-logo
 		margin: 15px 0
+		img
+			height: 60px
+			cursor: pointer
 	&-menu
 		.header-menu__desktop
 			list-style-type: none 
@@ -131,7 +180,7 @@
 				font-weight: 400 
 				margin-right: 48px
 				&:hover
-					color: #6c60f3
+					color: $accent
 
 .burger 
 	display: none
@@ -194,7 +243,7 @@
 		cursor: pointer
 		font-size: 16px
 		color: #fff
-		background-color: #7b70f3
+		background-color: $accent
 
 
 .offer
@@ -228,7 +277,7 @@
 				cursor: pointer 
 				font-size: 16px 
 				color: #fff 
-				background-color: #7b70f3 
+				background-color: $accent
 				@media (max-width: 640px)
 					padding: .8rem 1.5rem
 				@media (max-width: 475px)
@@ -246,6 +295,7 @@
 				color: #2e2e2e
 				background-color: transparent
 				margin-left: 15px
+				cursor: pointer
 				font-size: 16px
 				font-family: "Poppins", sans-serif
 				font-weight: 400
@@ -288,6 +338,7 @@
 				width: 100%
 
 .why
+	padding-top: 130px
 	&-cards
 		gap: 2rem
 		display: grid
@@ -317,7 +368,7 @@
 				color: #323232
 				font-family: "Inter", sans-serif
 			&:first-child
-				background-color: #6c60f3
+				background-color: $accent
 				color: #fff
 				h3
 					color: #fff
@@ -363,6 +414,7 @@
 					margin-top: 10px
 
 .steps
+	padding-top: 130px
 	&-wrap
 		gap: 45px
 		display: grid
@@ -427,9 +479,9 @@
 				
 
 .action
+	padding-top: 100px
 	&-banner
-		margin-top: 6rem
-		background-image: url(/img/banner.webp)
+		background-image: url(/img/me.jpg)
 		background-size: cover
 		background-position: 50%
 		width: 100%
@@ -489,7 +541,6 @@
 
 .reviews
 	padding-top: 130px
-	padding-bottom: 80px
 	&-slider
 		max-width: 80%
 		padding-top: 20px
@@ -516,11 +567,14 @@
 			font-size: 18px
 			color: #25313c
 			margin: 30px 0
-			line-height: 27px
+			line-height: 24px
 			font-family: "Inter", sans-serif
 			font-optical-sizing: auto
 			font-weight: 400
 			font-style: normal
+			@media (max-width: 580px)
+				font-size: 16px
+				margin: 15px 0
 		.slashes
 			display: block
 			&:last-of-type
@@ -530,11 +584,19 @@
 			justify-content: space-between
 			width: 100%
 			margin-top: 60px
+			@media (max-width: 580px)
+				flex-direction: column
+				margin-top: 30px
 			img
 				max-width: 250px
+				@media (max-width: 580px) 
+					max-width: 180px 
+					width: 60%
 			&__person
 				display: inline-flex
 				align-items: center
+				@media (max-width: 580px)
+					margin-top: 20px
 				img
 					width: 50px
 					height: 50px
@@ -558,6 +620,7 @@
 
 
 .faq 
+	padding-top: 130px
 	padding-bottom: 160px
 	.row
 		display: grid
@@ -659,8 +722,7 @@
 
 
 footer
-	padding-top: 60px
-	padding-bottom: 30px
+	padding: 60px 0 80px 0
 	font-family: "Inter", sans-serif
 
 					
@@ -669,7 +731,6 @@ footer
 	display: flex
 	flex-direction: column
 	margin: auto
-	margin-bottom: 100px
 	text-align: center
 	@media (max-width: 768px) 
 		max-width: 400px
@@ -718,7 +779,7 @@ footer
 	margin-top: 30px
 
 .footer-logo
-	width: 170px
+	height: 70px
 	cursor: pointer
 	@media (min-width: 768px) 
 		margin: auto

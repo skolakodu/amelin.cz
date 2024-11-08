@@ -11,6 +11,60 @@
   padding: 0 1rem;
 }
 
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.697);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.player {
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  max-height: 700px;
+  position: relative;
+  z-index: 1000;
+}
+.player iframe {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 640px) {
+  .player {
+    max-width: 900px;
+    max-height: 400px;
+  }
+}
+
+.button-modal {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #4169E1;
+  border: none;
+  color: #fff;
+  border-radius: 50rem;
+  transition: background 0.2s ease;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+  padding: 20px 30px;
+}
+@media (max-width: 640px) {
+  .button-modal {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
 @media (min-width: 475px) {
   .container {
     max-width: 475px;
@@ -50,7 +104,7 @@
   margin-bottom: 65px;
 }
 .headline-text {
-  color: #6c60f3;
+  color: #4169E1;
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -97,7 +151,7 @@
   cursor: pointer;
   font-size: 16px;
   color: #fff;
-  background-color: #7b70f3;
+  background-color: #4169E1;
 }
 .buttonHeader img {
   width: 18px;
@@ -136,6 +190,10 @@
 .header-logo {
   margin: 15px 0;
 }
+.header-logo img {
+  height: 60px;
+  cursor: pointer;
+}
 .header-menu .header-menu__desktop {
   list-style-type: none;
   padding: 0;
@@ -156,7 +214,7 @@
   margin-right: 48px;
 }
 .header-menu .header-menu__desktop li:hover {
-  color: #6c60f3;
+  color: #4169E1;
 }
 
 .burger {
@@ -229,7 +287,7 @@
   cursor: pointer;
   font-size: 16px;
   color: #fff;
-  background-color: #7b70f3;
+  background-color: #4169E1;
 }
 
 .offer {
@@ -271,7 +329,7 @@
   cursor: pointer;
   font-size: 16px;
   color: #fff;
-  background-color: #7b70f3;
+  background-color: #4169E1;
 }
 @media (max-width: 640px) {
   .offer-wrap__buttons .buttonOffer {
@@ -297,6 +355,7 @@
   color: #2e2e2e;
   background-color: transparent;
   margin-left: 15px;
+  cursor: pointer;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -357,6 +416,9 @@
   }
 }
 
+.why {
+  padding-top: 130px;
+}
 .why-cards {
   gap: 2rem;
   display: grid;
@@ -396,7 +458,7 @@
   font-family: "Inter", sans-serif;
 }
 .why-cards .card:first-child {
-  background-color: #6c60f3;
+  background-color: #4169E1;
   color: #fff;
 }
 .why-cards .card:first-child h3 {
@@ -462,6 +524,9 @@
   }
 }
 
+.steps {
+  padding-top: 130px;
+}
 .steps-wrap {
   gap: 45px;
   display: grid;
@@ -547,9 +612,11 @@
   }
 }
 
+.action {
+  padding-top: 100px;
+}
 .action-banner {
-  margin-top: 6rem;
-  background-image: url(/img/banner.webp);
+  background-image: url(/img/me.jpg);
   background-size: cover;
   background-position: 50%;
   width: 100%;
@@ -623,7 +690,6 @@
 
 .reviews {
   padding-top: 130px;
-  padding-bottom: 80px;
 }
 .reviews-slider {
   max-width: 80%;
@@ -654,11 +720,17 @@
   font-size: 18px;
   color: #25313c;
   margin: 30px 0;
-  line-height: 27px;
+  line-height: 24px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+@media (max-width: 580px) {
+  .reviews .review p {
+    font-size: 16px;
+    margin: 15px 0;
+  }
 }
 .reviews .review .slashes {
   display: block;
@@ -672,12 +744,29 @@
   width: 100%;
   margin-top: 60px;
 }
+@media (max-width: 580px) {
+  .reviews .review-bottom {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
 .reviews .review-bottom img {
   max-width: 250px;
+}
+@media (max-width: 580px) {
+  .reviews .review-bottom img {
+    max-width: 180px;
+    width: 60%;
+  }
 }
 .reviews .review-bottom__person {
   display: inline-flex;
   align-items: center;
+}
+@media (max-width: 580px) {
+  .reviews .review-bottom__person {
+    margin-top: 20px;
+  }
 }
 .reviews .review-bottom__person img {
   width: 50px;
@@ -703,6 +792,7 @@
 }
 
 .faq {
+  padding-top: 130px;
   padding-bottom: 160px;
 }
 .faq .row {
@@ -827,8 +917,7 @@
 }
 
 footer {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding: 60px 0 80px 0;
   font-family: "Inter", sans-serif;
 }
 
@@ -836,7 +925,6 @@ footer {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 100px;
   text-align: center;
 }
 @media (max-width: 768px) {
@@ -895,7 +983,7 @@ footer {
 }
 
 .footer-logo {
-  width: 170px;
+  height: 70px;
   cursor: pointer;
 }
 @media (min-width: 768px) {

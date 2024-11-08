@@ -14,15 +14,15 @@
     <header class="header">
         <div class="container">
             <nav class="header-wrap">
-                <div class="header-logo">
-                    <h2>Roman Amelin</h2>
+                <div class="header-logo logo">
+                    <img src="img/logo.png" alt="">
                 </div>
                 <div class="header-menu">
                     <ul class="header-menu__desktop">
-                        <li>Mé práce</li>
-                        <li>Recenze</li>
-                        <li>Dotazy</li>
-                        <button class="buttonHeader">
+                        <li class="menu-link" data-target="portfolio">Mé práce</li>
+                        <li class="menu-link" data-target="reviews">Recenze</li>
+                        <li class="menu-link" data-target="faq">Dotazy</li>
+                        <button class="buttonHeader menu-link" data-target="call">
                             <img src="img/callWhite.svg" alt="Nezávazná konzultace zdarma">
                             Konzultace zdarma
                         </button>
@@ -33,10 +33,10 @@
                         <div class="line"></div>
                     </div>
                     <ul class="menu" id="menu">
-                        <li>Mé práce</li>
-                        <li>Recenze</li>
-                        <li>Dotazy</li>
-                        <button class="buttonHeader">
+                        <li class="menu-link" data-target="portfolio">Mé práce</li>
+                        <li class="menu-link" data-target="reviews">Recenze</li>
+                        <li class="menu-link" data-target="faq">Dotazy</li>
+                        <button class="buttonHeader menu-link" data-target="call">
                             <img src="img/callWhite.svg" alt="Nezávazná konzultace zdarma">
                             Konzultace zdarma
                         </button>
@@ -57,17 +57,23 @@
                         Pomáháme podnikatelům a malým firmám tvorbou prezentačních webů, které přitahují nové zákazníky a zvyšují poptávku.
                     </h2>
                     <div class="offer-wrap__buttons">
-                        <button class="buttonOffer">
+                        <button class="buttonOffer menu-link" data-target="call">
                             <img src="img/drawWhite.svg" alt="Domluvme si nezáváznou konzultaci zdarma">
-                            Návrh webu zdarma
+                            Strategie zvětšení prodejů
                         </button>
-                        <button class="buttonWork">Naše práce</button>
+                        <button class="buttonWork menu-link" data-target="portfolio">Naše práce</button>
                     </div>
                 </div>
                 <div class="offer-video">
-                    <img src="img/offerVideo.webp" alt="Tvořím webové stránky" draggable="false">
+                    <img src="img/offerVideo.webp" alt="Tvořím webové stránky" draggable="false" class="open-popup">
                 </div>
             </div>
+        </div>
+        <div class="video-modal">
+            <div class="player">
+
+            </div>
+            <button class="button-modal">Zavřít informační video</button>
         </div>
     </section>
     <section class="why">
@@ -95,36 +101,28 @@
             </div>
         </div>
     </section>
-    <section class="web">
+    <section class="web" id="portfolio">
         <div class="container">
             <div class="headline-wrap">
                 <p class="headline-text">weby na míru</p>
                 <h2 class="headline-h2">Ukázka našich projektů</h2>
             </div>
             <div class="web-wrap">
-                <a href="#" class="webs">
-                    <img src="img/test1.webp" alt="">
-                    <h2>Poptávkový web pro firmu Restart</h2>
+                <a href="https://onlineprofese.cz/" class="webs" target="_blank">
+                    <img src="img/OnlineProfese.jpg" alt="">
+                    <h2>Prodejní stránka pro online školu Online Profese</h2>
                 </a>
-                <a href="#" class="webs">
-                    <img src="img/test2.webp" alt="">
-                    <h2>Poptávkový web masážního studia Prochyrelax</h2>
+                <a href="#" class="webs" target="_blank">
+                    <img src="img/Run.jpg" alt="">
+                    <h2>Poptávkový web prodejce koloběžek Run</h2>
                 </a>
-                <a href="#" class="webs">
-                    <img src="img/test3.webp" alt="">
-                    <h2>Prezentační web ubytovaní Villa Fillipa</h2>
+                <a href="#" class="webs" target="_blank">
+                    <img src="img/HouseFix.jpg" alt="" >
+                    <h2>Poptávkový web návrhářů interiéru HouseFix</h2>
                 </a>
-                <a href="#" class="webs">
-                    <img src="img/test4.webp" alt="">
-                    <h2>Prodejní web služeb pro fitness trenéra Petra</h2>
-                </a>
-                <a href="#" class="webs">
-                    <img src="img/test5.webp" alt="">
-                    <h2>Poptávkový web pro finančího poradce Tomáše</h2>
-                </a>
-                <a href="#" class="webs">
-                    <img src="img/test6.webp" alt="">
-                    <h2>Prezentační web pro bar v Poděbradech</h2>
+                <a href="#" class="webs" target="_blank">
+                    <img src="img/Afo3Power.jpg" alt="">
+                    <h2>Prodejní stránka pro zdravotní pomůcky od Afo3Power</h2>
                 </a>
             </div>
         </div>
@@ -137,7 +135,7 @@
             </div>
             <div class="steps-wrap">
                 <div class="steps-image">
-                    <img src="img/stepsImage.webp" alt="">
+                    <img src="img/YourWeb.webp" alt="">
                 </div>
                 <div class="steps-text">
                     <div class="singleStep active">
@@ -150,7 +148,7 @@
                     <div class="singleStep">
                         <h2>
                             <img src="img/step2.svg" alt="">
-                            Získáte návrh svého webu zdarma
+                            Získáte návrh svého webu
                         </h2>
                         <p>Do 7 pracovních dnů obdržíte prvotní návrh svého webu, který bude obsahovat potřebné sekce, vaše logo a firemní barvy. Pokud budete s návrhem spokojeni, začne naše společná spolupráce a zhotovení webu.</p>
                     </div>
@@ -168,7 +166,7 @@
     <section class="action">
         <div class="container">
             <div class="action-banner">
-                <h2>Získejte návrh svého<br>webu zdarma</h2>
+                <h2>Získejte strategii pro<br>váš web zdarma</h2>
                 <p>Rezervujte si 30minutovou konzultaci zdarma, kde společně pustíme do tvorby vašeho nového webu.</p>
                 <button>
                     <img src="img/callBlack.svg" alt="Zavolejte nám">
@@ -178,7 +176,7 @@
         </div>
     </section>
     <!-- use swiper as a slider -->
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <div class="headline-wrap">
                 <p class="headline-text">Co o nás říkají klienti?</p>
@@ -193,15 +191,15 @@
                 <div class="swiper-slide">
                     <div class="review">
                         <img class="slashes" src="img/slashes.svg" alt="">
-                        <p>Pokud přemýšlíte o nových webových stránkách, doporučujeme firmu redesigner. Jejich přístup byl od začátku milý a laskavý. Po celou dobu reagovali hned, vše se řešilo bez problémů a vždy se snažili splnit naše představy. Žádné čekání, žádná arogantní komunikace, jen profesionalita.</p>
+                        <p>Skvělá spolupráce od začátku do konce! Web byl hotový rychle a přesně podle mých představ. Každý detail, který jsem zmínil, byl do stránky zapracován. Doporučuji každému, kdo hledá spolehlivého webového vývojáře!</p>
                         <img class="slashes" src="img/slashes.svg" alt="">
                         <div class="review-bottom">
                             <img src="img/stars.svg" alt="">
                             <div class="review-bottom__person">
-                                <img src="img/test1.png" alt="">
+                                <img src="img/Anthony.png" alt="">
                                 <div>
-                                    <h2>Roman Amelin</h2>
-                                    <h3>amelin.cz</h3>
+                                    <h2>Anthony Hunkeler</h2>
+                                    <h3>Afo3Power</h3>
                                 </div>
                             </div>
                         </div>
@@ -210,15 +208,15 @@
                 <div class="swiper-slide">
                     <div class="review">
                         <img class="slashes" src="img/slashes.svg" alt="">
-                        <p>Pokud přemýšlíte o nových webových stránkách, doporučujeme firmu redesigner. Jejich přístup byl od začátku milý a laskavý. Po celou dobu reagovali hned, vše se řešilo bez problémů a vždy se snažili splnit naše představy. Žádné čekání, žádná arogantní komunikace, jen profesionalita.</p>
+                        <p>Velká spokojenost s kvalitou a rychlostí práce. Oceňuji trpělivost, se kterou reagoval na mé dotazy a úpravy. Celkový výsledek předčil má očekávání, můj web teď vypadá profesionálně a zákazníci ho chválí. Děkuji!</p>
                         <img class="slashes" src="img/slashes.svg" alt="">
                         <div class="review-bottom">
                             <img src="img/stars.svg" alt="">
                             <div class="review-bottom__person">
-                                <img src="img/test1.png" alt="">
+                                <img src="img/Eliska.png" alt="">
                                 <div>
-                                    <h2>Roman Amelin</h2>
-                                    <h3>amelin.cz</h3>
+                                    <h2>Eliška Kozáková</h2>
+                                    <h3>Run</h3>
                                 </div>
                             </div>
                         </div>
@@ -227,15 +225,15 @@
                 <div class="swiper-slide">
                     <div class="review">
                         <img class="slashes" src="img/slashes.svg" alt="">
-                        <p>Pokud přemýšlíte o nových webových stránkách, doporučujeme firmu redesigner. Jejich přístup byl od začátku milý a laskavý. Po celou dobu reagovali hned, vše se řešilo bez problémů a vždy se snažili splnit naše představy. Žádné čekání, žádná arogantní komunikace, jen profesionalita.</p>
+                        <p>Na doporučení jsem oslovil Romana a jeho tým a musím říct, že to byla skvělá volba. Potřeboval jsem jednoduchý, ale moderní web pro své podnikání, a výsledek mě mile překvapil. Byl jsem příjemně překvapený rychlostí práce a tím, jak mi bylo všechno jasně vysvětleno. Oceňuji hlavně ochotu a trpělivost při drobných úpravách. Web funguje bezchybně a vypadá profesionálně. Skvělý servis.</p>
                         <img class="slashes" src="img/slashes.svg" alt="">
                         <div class="review-bottom">
                             <img src="img/stars.svg" alt="">
                             <div class="review-bottom__person">
-                                <img src="img/test1.png" alt="">
+                                <img src="img/Aaron.png" alt="">
                                 <div>
-                                    <h2>Roman Amelin</h2>
-                                    <h3>amelin.cz</h3>
+                                    <h2>Aaron Vermont</h2>
+                                    <h3>HouseFix</h3>
                                 </div>
                             </div>
                         </div>
@@ -244,15 +242,15 @@
                 <div class="swiper-slide">
                     <div class="review">
                         <img class="slashes" src="img/slashes.svg" alt="">
-                        <p>Pokud přemýšlíte o nových webových stránkách, doporučujeme firmu redesigner. Jejich přístup byl od začátku milý a laskavý. Po celou dobu reagovali hned, vše se řešilo bez problémů a vždy se snažili splnit naše představy. Žádné čekání, žádná arogantní komunikace, jen profesionalita.</p>
+                        <p>Výborná komunikace a profesionální přístup! Vývojář mi pomohl s optimalizací webu, což okamžitě přineslo lepší výsledky. Navíc se postaral o bezpečnostní prvky, na které jsem ani nepomyslel.</p>
                         <img class="slashes" src="img/slashes.svg" alt="">
                         <div class="review-bottom">
                             <img src="img/stars.svg" alt="">
                             <div class="review-bottom__person">
-                                <img src="img/test1.png" alt="">
+                                <img src="img/Akbar.png" alt="">
                                 <div>
-                                    <h2>Roman Amelin</h2>
-                                    <h3>amelin.cz</h3>
+                                    <h2>Akbar Alzhanov</h2>
+                                    <h3>YouTubeMaster</h3>
                                 </div>
                             </div>
                         </div>
@@ -266,7 +264,7 @@
             <img src="img/next.svg" alt="" class="next">
          </div>
     </section>
-    <section class="faq">
+    <section class="faq" id="faq">
         <div class="container">
             <div class="headline-wrap">
                 <p class="headline-text">vaše dotazy</p>
@@ -318,7 +316,7 @@
             </div>
         </div>
     </section>
-    <section class="book">
+    <section class="book" id="call">
         <div class="container">
             <h2>30minutová nezávazná konzultace</h2>
             <p>Rezervace 30minutové nezávazné konzultace, ve které společně probereme vaše podnikání a vaše představy o novém webu.</p>
@@ -331,7 +329,7 @@
     <footer>
         <div class="container">
             <div class="footer-wrap">
-                <img src="img/logoTest.png" class="footer-logo" alt="Naše firma tvoří více než jen web, jsme partněři pro online růst">
+                <img src="img/logo.png" class="footer-logo" alt="Naše firma tvoří více než jen web, jsme partněři pro online růst">
                 <p class="footer-question">Máte obecný dotaz?</p>
                 <a href="mailto:roman@amelin.cz" target="_blank">
                     <img src="img/footeremail.svg" alt="E-mail Romana"> roman@amelin.cz
