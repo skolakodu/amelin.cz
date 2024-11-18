@@ -191,7 +191,7 @@
   margin: 15px 0;
 }
 .header-logo img {
-  height: 60px;
+  width: 150px;
   cursor: pointer;
 }
 .header-menu .header-menu__desktop {
@@ -400,7 +400,6 @@
 .offer-video img {
   cursor: pointer;
   height: auto;
-  max-height: 600px;
   margin-left: auto;
   width: 100%;
 }
@@ -616,7 +615,7 @@
   padding-top: 100px;
 }
 .action-banner {
-  background-image: url(/img/me.jpg);
+  background-image: url(/img/me2.jpg);
   background-size: cover;
   background-position: 50%;
   width: 100%;
@@ -644,9 +643,9 @@
   font-weight: 800;
   font-style: normal;
 }
-@media (max-width: 475px) {
+@media (max-width: 640px) {
   .action-banner h2 {
-    font-size: 35px;
+    font-size: 32px;
   }
 }
 .action-banner p {
@@ -662,6 +661,11 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+@media (max-width: 640px) {
+  .action-banner p {
+    font-size: 16px;
+  }
 }
 .action-banner button {
   background-color: #fff;
@@ -890,7 +894,7 @@
   text-align: center;
   color: #fff;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 @media (max-width: 1280px) {
@@ -898,15 +902,15 @@
     margin-bottom: 30px;
   }
 }
-@media (max-width: 475px) {
+@media (max-width: 640px) {
   .book h2 {
-    font-size: 35px;
+    font-size: 32px;
     line-height: normal;
   }
 }
 .book p {
   font-size: 18px;
-  max-width: 600px;
+  max-width: 700px;
   text-align: center;
   color: #fff;
   font-weight: 300;
@@ -914,6 +918,11 @@
   line-height: 1.6;
   font-family: "Inter", sans-serif;
   margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  .book p {
+    font-size: 16px;
+  }
 }
 
 footer {
@@ -983,7 +992,7 @@ footer {
 }
 
 .footer-logo {
-  height: 70px;
+  width: 150px;
   cursor: pointer;
 }
 @media (min-width: 768px) {

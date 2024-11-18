@@ -1,5 +1,6 @@
 const swiper = new Swiper('.swiper', {
     loop: true,
+    autoHeight: true,
     slidesPerView: 1,
     navigation: {
       nextEl: '.next',
@@ -109,15 +110,32 @@ const playerContainer = document.querySelector('.player');
 // Function to create and add the iframe to the DOM
 function addIframe() {
   const iframe = document.createElement('iframe');
-  iframe.src = "https://www.youtube.com/embed/BVhwqX0TIqk?si=Vglc8quNRz2_s8aj";
-  iframe.title = "YouTube video player";
+  iframe.src = "https://player.vimeo.com/video/1029717332?badge=0&autopause=0&player_id=0&app_id=58479";
+  iframe.title = "Jak vám dokážu zvýšit prodeje";
   iframe.frameBorder = "0";
-  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.allow = "autoplay; fullscreen; picture-in-picture; clipboard-write";
+  iframe.style.position = "absolute";
+  iframe.style.top = "0";
+  iframe.style.left = "0";
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
   iframe.allowFullscreen = true;
 
-  playerContainer.appendChild(iframe);
+  // Create a container div with responsive styling
+  const container = document.createElement('div');
+  // container.style.padding = "56.25% 0 0 0"; // This maintains a 16:9 aspect ratio
+  // container.style.position = "relative";
+
+
+  // Append the iframe to the container, then add the container to the player container
+  container.appendChild(iframe);
+  playerContainer.appendChild(container);
 }
+
+// Load the Vimeo player API
+const script = document.createElement('script');
+script.src = "https://player.vimeo.com/api/player.js";
+document.head.appendChild(script);
 
 // Function to open the popup
 function openPopup() {
